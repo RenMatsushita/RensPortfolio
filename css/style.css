@@ -288,6 +288,20 @@ button{
 }
 /* ----------------sns----------------- */
 
+/* ---------------footer--------------- */
+
+#footer {
+	width: 100vw;
+	height: 80px;
+}
+
+#copy {
+	color: #4285f4;
+	text-align: center;
+	line-height: 80px;
+}
+
+
 @media(max-width: 830px) {
 
 	#skill-main {
