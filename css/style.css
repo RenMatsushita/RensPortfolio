@@ -12,16 +12,32 @@ button{
 	appearance: none;
 }
 
+main {
+	background-color: #fff;
+}
+
 /* ---------------header--------------- */
 
 #header {
-	position: relative;
+	position: fixed;
+	z-index: -1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 100vw;
 	height: 100vh;
 	background-color: #4285f4;
+	background-attachment: fixed;
+	z-index: -1;
+}
+
+#header:not() {
+	background-color: #fff;
+}
+
+#wrapper {
+	width: 100%;
+	height: 100vh
 }
 
 #top-title {
@@ -34,7 +50,7 @@ button{
 	width: 60px;
 	height: 60px;
 	right: 40px;
-	bottom: 40px;
+	bottom: 160px;
 }
 
 #fab-to-top {
@@ -58,6 +74,7 @@ button{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	z-index: 100;
 	width: 100vw;
 	height: 100vh;
 }
@@ -91,6 +108,7 @@ button{
 /* ---------------skills--------------- */
 
 #skills {
+	position: relative;
 	width: 100vw;
 	height: 100%;
 }
@@ -291,6 +309,7 @@ button{
 /* ---------------footer--------------- */
 
 #footer {
+	background-color: #fff;
 	width: 100vw;
 	height: 80px;
 }
