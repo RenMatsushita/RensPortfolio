@@ -1,21 +1,19 @@
 $(function() {
-    const fab_to_top = $('#fab-to-top');
     const view_height = window.innerHeight;
-    fab_to_top.hide();
-
-    $('#about-data-list').fadeIn();
-    console.log("ffffff");
-    
-
-    // $(window).scroll(function () {
-    //     if ($(this).scrollTop() > view_height*2) {
-    //         fab_to_top.fadeIn();
-    //     } else {
-    //         fab_to_top.fadeOut();
-    //     }
-    // });
-
-    // fab_to_top.click(function() {
-    //     $('html,body').animate({scrollTop: 0}, 400, 'swing');
-    // });
+    const skillMain = $('#skill-main')
+    const subSkills = $('.sub_skills')
+    const skillMainScrollTop = skillMain.offset().top;
+    const subSkillsScrollTop = subSkills.offset().top;
+    $(window).scroll(function () {
+        const scrollTop = $(this).scrollTop();
+        if (scrollTop > subSkillsScrollTop - view_height / 1.5) {
+            subSkills.animate({
+                'opacity': '1'
+            }, 600)
+        } else if (scrollTop > skillMainScrollTop - view_height / 1.5) {
+            skillMain.animate({
+                'opacity': '1'
+            }, 600);
+        } 
+    });
 });
